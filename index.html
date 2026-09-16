@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Spooky Finds — Halloween Decorations</title>
+    <meta
+      name="description"
+      content="Discover spooky Halloween decorations for your home, porch, yard and Halloween party."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #080808;
+        --bg-soft: #101010;
+        --card: #131313;
+        --card-hover: #191919;
+        --orange: #ff6a00;
+        --orange-light: #ff8a32;
+        --purple: #8d4cff;
+        --text: #f7f4ef;
+        --muted: #999;
+        --border: rgba(255, 106, 0, 0.18);
+        --max-width: 1180px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background:
+          radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 106, 0, 0.08),
+            transparent 35%
+          ),
+          var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* =========================
+       BACKGROUND EFFECTS
+    ========================= */
+
+      .web {
+        position: fixed;
+        pointer-events: none;
+        opacity: 0.12;
+        z-index: 0;
+        font-size: 150px;
+        line-height: 1;
+      }
+
+      .web.one {
+        top: 15px;
+        left: -25px;
+        transform: rotate(-20deg);
+      }
+
+      .web.two {
+        right: -25px;
+        top: 160px;
+        transform: rotate(20deg);
+      }
+
+      .glow {
+        position: fixed;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: var(--orange);
+        filter: blur(180px);
+        opacity: 0.04;
+        pointer-events: none;
+      }
+
+      .glow.one {
+        top: 15%;
+        left: -150px;
+      }
+
+      .glow.two {
+        top: 55%;
+        right: -150px;
+        background: var(--purple);
+      }
+
+      /* =========================
+       HEADER
+    ========================= */
+
+      header {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(8, 8, 8, 0.78);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav {
+        max-width: var(--max-width);
+        margin: auto;
+        padding: 18px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        font-size: 18px;
+      }
+
+      .logo span {
+        color: var(--orange);
+      }
+
+      .nav-cta {
+        border: 1px solid var(--border);
+        padding: 9px 15px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 700;
+        transition: 0.25s;
+      }
+
+      .nav-cta:hover {
+        background: var(--orange);
+        color: #000;
+        border-color: var(--orange);
+      }
+
+      /* =========================
+       HERO
+    ========================= */
+
+      .hero {
+        position: relative;
+        z-index: 1;
+        max-width: var(--max-width);
+        min-height: 610px;
+        margin: auto;
+        padding: 100px 24px 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: 760px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        color: var(--orange-light);
+        background: rgba(255, 106, 0, 0.05);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+      }
+
+      h1 {
+        font-family: "Creepster", cursive;
+        font-size: clamp(58px, 9vw, 108px);
+        line-height: 0.92;
+        letter-spacing: 2px;
+        font-weight: 400;
+        text-shadow: 0 0 30px rgba(255, 106, 0, 0.16);
+      }
+
+      h1 span {
+        color: var(--orange);
+      }
+
+      .hero p {
+        max-width: 570px;
+        margin: 28px auto 34px;
+        color: #b7b7b7;
+        line-height: 1.7;
+        font-size: 16px;
+      }
+
+      .primary-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: var(--orange);
+        color: #080808;
+        padding: 15px 24px;
+        border-radius: 9px;
+        font-weight: 800;
+        font-size: 14px;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s,
+          background 0.25s;
+        box-shadow: 0 10px 35px rgba(255, 106, 0, 0.15);
+      }
+
+      .primary-btn:hover {
+        transform: translateY(-3px);
+        background: var(--orange-light);
+        box-shadow: 0 15px 45px rgba(255, 106, 0, 0.25);
+      }
+
+      /* =========================
+       PRODUCTS
+    ========================= */
+
+      .products-section {
+        position: relative;
+        z-index: 2;
+        max-width: var(--max-width);
+        margin: auto;
+        padding: 35px 24px 100px;
+      }
+
+      .section-heading {
+        text-align: center;
+        margin-bottom: 38px;
+      }
+
+      .section-heading h2 {
+        font-family: "Creepster", cursive;
+        font-size: 48px;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+
+      .section-heading p {
+        color: var(--muted);
+        margin-top: 8px;
+        font-size: 14px;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .product-card {
+        position: relative;
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.035),
+          rgba(255, 255, 255, 0.015)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 16px;
+        overflow: hidden;
+        transition:
+          transform 0.3s,
+          border-color 0.3s,
+          background 0.3s;
+      }
+
+      .product-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 106, 0, 0.35);
+        background: var(--card-hover);
+      }
+
+      .product-image {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background:
+          radial-gradient(circle, rgba(255, 106, 0, 0.08), transparent 55%),
+          #0d0d0d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /*
+      Replace each .image-placeholder with:
+
+      <img src="YOUR-IMAGE.jpg" alt="Product name">
+
+      Example:
+      <img src="images/spider-web.jpg" alt="Halloween spider web">
+    */
+
+      .image-placeholder {
+        color: #555;
+        text-align: center;
+        padding: 20px;
+        font-size: 13px;
+      }
+
+      .image-placeholder strong {
+        display: block;
+        color: #777;
+        margin-bottom: 5px;
+      }
+
+      .product-info {
+        padding: 18px;
+      }
+
+      .tag {
+        display: inline-block;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: var(--orange-light);
+        margin-bottom: 9px;
+        font-weight: 800;
+      }
+
+      .product-info h3 {
+        font-size: 17px;
+        line-height: 1.35;
+        margin-bottom: 7px;
+      }
+
+      .product-info p {
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.5;
+        min-height: 38px;
+      }
+
+      .amazon-btn {
+        margin-top: 15px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 11px 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 106, 0, 0.35);
+        color: var(--orange-light);
+        font-size: 12px;
+        font-weight: 800;
+        transition: 0.25s;
+      }
+
+      .amazon-btn:hover {
+        background: var(--orange);
+        border-color: var(--orange);
+        color: #000;
+      }
+
+      /* =========================
+       FINAL CTA
+    ========================= */
+
+      .final-cta {
+        position: relative;
+        z-index: 2;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 70px 24px 120px;
+        text-align: center;
+      }
+
+      .final-cta-box {
+        border: 1px solid rgba(255, 106, 0, 0.2);
+        background:
+          radial-gradient(
+            circle at 50% 100%,
+            rgba(255, 106, 0, 0.12),
+            transparent 55%
+          ),
+          #101010;
+        border-radius: 22px;
+        padding: 65px 25px;
+      }
+
+      .final-cta h2 {
+        font-family: "Creepster", cursive;
+        font-size: clamp(42px, 6vw, 66px);
+        font-weight: 400;
+        margin-bottom: 12px;
+      }
+
+      .final-cta p {
+        color: var(--muted);
+        margin-bottom: 28px;
+        font-size: 14px;
+      }
+
+      /* =========================
+       FOOTER
+    ========================= */
+
+      footer {
+        position: relative;
+        z-index: 2;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 25px 20px 100px;
+        text-align: center;
+      }
+
+      footer p {
+        max-width: 650px;
+        margin: auto;
+        color: #666;
+        font-size: 11px;
+        line-height: 1.6;
+      }
+
+      .affiliate {
+        margin-top: 10px;
+      }
+
+      /* =========================
+       MOBILE STICKY CTA
+    ========================= */
+
+      .mobile-cta {
+        display: none;
+      }
+
+      /* =========================
+       RESPONSIVE
+    ========================= */
+
+      @media (max-width: 900px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero {
+          min-height: 540px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .nav {
+          padding: 15px 16px;
+        }
+
+        .nav-cta {
+          font-size: 11px;
+          padding: 8px 12px;
+        }
+
+        .hero {
+          min-height: 560px;
+          padding: 75px 18px 70px;
+        }
+
+        h1 {
+          font-size: clamp(56px, 18vw, 84px);
+        }
+
+        .hero p {
+          font-size: 14px;
+          margin-top: 23px;
+        }
+
+        .primary-btn {
+          width: 100%;
+          max-width: 320px;
+        }
+
+        .products-section {
+          padding: 25px 14px 80px;
+        }
+
+        .section-heading {
+          margin-bottom: 25px;
+        }
+
+        .section-heading h2 {
+          font-size: 42px;
+        }
+
+        .products-grid {
+          gap: 10px;
+        }
+
+        .product-card {
+          border-radius: 12px;
+        }
+
+        .product-info {
+          padding: 13px;
+        }
+
+        .product-info h3 {
+          font-size: 14px;
+        }
+
+        .product-info p {
+          font-size: 11px;
+          min-height: 34px;
+        }
+
+        .amazon-btn {
+          font-size: 11px;
+          padding: 10px 5px;
+        }
+
+        .final-cta {
+          padding: 40px 14px 100px;
+        }
+
+        .final-cta-box {
+          padding: 48px 18px;
+        }
+
+        .mobile-cta {
+          display: block;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 100;
+          padding: 10px 12px;
+          background: rgba(5, 5, 5, 0.92);
+          border-top: 1px solid rgba(255, 106, 0, 0.25);
+          backdrop-filter: blur(14px);
+        }
+
+        .mobile-cta a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          background: var(--orange);
+          color: #000;
+          padding: 13px;
+          border-radius: 8px;
+          font-size: 13px;
+          font-weight: 900;
+        }
+
+        footer {
+          padding-bottom: 95px;
+        }
+        .product-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Decorative background -->
+    <div class="web one">🕸️</div>
+    <div class="web two">🕸️</div>
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+    <!-- HEADER -->
+
+    <!-- HERO -->
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>
+            Make Your Home<br />
+            <span>Spookier.</span>
+          </h1>
+
+          <p>
+            8 spooky Halloween finds to transform your porch, walls, yard and
+            party into a haunted setup.
+          </p>
+
+          <a href="#products" class="primary-btn">
+            SHOP HALLOWEEN DECOR
+            <span>→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="products-section" id="products">
+        <div class="section-heading">
+          <h2>👻 The Spooky Collection</h2>
+
+          <p>
+            Pick your favorite decorations and bring the spooky season home.
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <!-- PRODUCT 1 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img
+                src="images/spider-web.jpg"
+                alt="Halloween spider web decoration"
+              />
+            </div>
+
+            <div class="product-info">
+              <span class="tag">🕷️ Porch & Walls</span>
+
+              <h3>Halloween Spider Webs</h3>
+
+              <p>Stretchy spooky webbing with 25 fake spiders.</p>
+
+              <a
+                class="amazon-btn"
+                href="https://www.amazon.in/Halloween-Stretch-Outdoor-Decorations-AOSTAR/dp/B075K7KGT2?tag=arulkaarthike-21"
+                target="_blank"
+                rel="nofollow sponsored noopener"
+              >
+                VIEW ON AMAZON →
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 2 -->
+          <article class="product-card">
+            <div class="product-image">
+              <!-- PASTE YOUR IMAGE HERE -->
+              <img
+                src="images/spider-web.jpg"
+                alt="Halloween spider web decoration"
+              />
+            </div>
+
+            <div class="product-info">
+              <span class="tag">🌫️ Atmosphere</span>
+
+              <h3>Portable Fog Machine</h3>
+
+              <p>Add a mysterious fog effect to your Halloween setup.</p>
+
+              <a
+                class="amazon-btn"
+                href="https://www.amazon.in/Portable-Halloween-Wireless-Control%EF%BC%8CVIRFUN-Protection/dp/B081YNQG29?tag=arulkaarthike-21"
+                target="_blank"
+                rel="nofollow sponsored noopener"
+              >
+                VIEW ON AMAZON →
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 3 -->
+          <article class="product-card">
+            <div class="product-image">
+              <!-- PASTE YOUR IMAGE HERE -->
+              <img
+                src="images/spider-web.jpg"
+                alt="Halloween spider web decoration"
+              />
+            </div>
+
+            <div class="product-info">
+              <span class="tag">🪦 Halloween Yard</span>
+
+              <h3>Graveyard Tombstones</h3>
+
+              <p>Create a creepy cemetery scene in your yard.</p>
+
+              <a
+                class="amazon-btn"
+                href="https://www.amazon.in/JOYIN-Tombstones-Decoration-Headstones-Decorations/dp/B0D2CXBMDC?tag=arulkaarthike-21"
+                target="_blank"
+                rel="nofollow sponsored noopener"
+              >
+                VIEW ON AMAZON →
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 4 -->
+          <article class="product-card">
+            <div class="product-image">
+              <!-- PASTE YOUR IMAGE HERE -->
+              <img
+                src="images/spider-web.jpg"
+                alt="Halloween spider web decoration"
+              />
+            </div>
+
+            <div class="product-info">
+              <span class="tag">🔥 Outdoor Lighting</span>
+
+              <h3>Flickering Flame Lights</h3>
+
+              <p>Add eerie flickering light around your garden or yard.</p>
+
+              <a
+                class="amazon-btn"
+                href="https://www.amazon.in/Toodour-Halloween-Flickering-Waterproof-Decorations/dp/B09PL4W8DD?tag=arulkaarthike-21"
+                target="_blank"
+                rel="nofollow sponsored noopener"
+              >
+                VIEW ON AMAZON →
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 5 -->
+          <article class="product-card">
+            <div class="product-image">
+              <!-- PASTE YOUR IMAGE HERE -->
+              <img
+                src="images/spider-web.jpg"
+                alt="Halloween spider web decoration"
+              />
+            </div>
+
+            <div class="product-info">
+              <span class="tag">👻 Indoor Display</span>
+
+              <h3>Lit Ghost Figurines</h3>
+
+              <p>Small ghost accents for shelves and Halloween displays.</p>
+
+              <a
+                class="amazon-btn"
+                href="https://www.amazon.in/Department-56-Accessories-Halloween-Figurine/dp/B07MCD8RPQ?tag=arulkaarthike-21"
+                target="_blank"
+                rel="nofollow sponsored noopener"
+              >
+                VIEW ON AMAZON →
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 6 -->
+          <article class="product-card">
+            <div class="product-image">
+              <!-- PASTE YOUR IMAGE HERE -->
+              <img
+                src="images/spider-web.jpg"
+                alt="Halloween spider web decoration"
+              />
+            </div>
+
+            <div class="product-info">
+              <span class="tag">🦇 Wall Decor</span>
+
+              <h3>Bats & Spider Decorations</h3>
+
+              <p>Add creepy crawling details across your walls.</p>
+
+              <a
+                class="amazon-btn"
+                href="https://www.amazon.in/Incrizma-Halloween-Decorations-Realistic-Stickers/dp/B0CH8SQNFL?tag=arulkaarthike-21"
+                target="_blank"
+                rel="nofollow sponsored noopener"
+              >
+                VIEW ON AMAZON →
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 7 -->
+          <article class="product-card">
+            <div class="product-image">
+              <!-- PASTE YOUR IMAGE HERE -->
+              <img
+                src="images/spider-web.jpg"
+                alt="Halloween spider web decoration"
+              />
+            </div>
+
+            <div class="product-info">
+              <span class="tag">🎃 Accent Decor</span>
+
+              <h3>Halloween Pumpkin Light</h3>
+
+              <p>A glowing pumpkin accent for your spooky display.</p>
+
+              <a
+                class="amazon-btn"
+                href="https://www.amazon.in/Rozi-Decoration-Halloween-Pumpkin-Outdoor/dp/B0FNRV18CK?tag=arulkaarthike-21"
+                target="_blank"
+                rel="nofollow sponsored noopener"
+              >
+                VIEW ON AMAZON →
+              </a>
+            </div>
+          </article>
+
+          <!-- PRODUCT 8 -->
+          <article class="product-card">
+            <div class="product-image">
+              <!-- PASTE YOUR IMAGE HERE -->
+              <img
+                src="images/spider-web.jpg"
+                alt="Halloween spider web decoration"
+              />
+            </div>
+
+            <div class="product-info">
+              <span class="tag">⚠️ Party Decor</span>
+
+              <h3>Halloween Warning Tape</h3>
+
+              <p>Finish your spooky scene with creepy hazard-style tape.</p>
+
+              <a
+                class="amazon-btn"
+                href="https://www.amazon.in/Halloween-Warning-Decorations-Hazard-Indoor/dp/B0BBVL5CJG?tag=arulkaarthike-21"
+                target="_blank"
+                rel="nofollow sponsored noopener"
+              >
+                VIEW ON AMAZON →
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="final-cta">
+        <h2>
+          Create Your<br />
+          Haunted House 🎃
+        </h2>
+
+        <p>Pick your spooky favorites and start decorating.</p>
+
+        <a href="#products" class="primary-btn"> SHOP ALL HALLOWEEN FINDS → </a>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Room Theory · Curated decor ideas & seasonal finds</p>
+    </footer>
+
+    <!-- MOBILE STICKY CTA -->
+    <div class="mobile-cta">
+      <a href="#products"> 🎃 SHOP HALLOWEEN FINDS → </a>
+    </div>
+  </body>
+</html>
